@@ -47,18 +47,18 @@ const PACKAGE_ID = "0x936313e502e9cbf6e7a04fe2aeb4c60bc0acd69729acc7a19921b33beb
         });
 
         // Wait for it to be confirmed and get the effects
-        const result = await suiClient.waitForTransaction({
-             digest: response.digest,
+        const result: any = await suiClient.waitForTransaction({
+             digest: (response as any).digest,
              options: {
                  showEffects: true,
                  showObjectChanges: true,
              }
-        });
+        } as any);
 
         if (result.effects?.status.status === 'success') {
             console.log("Successfully extracted the flag!");
             console.log(`Transaction digest: ${result.digest}`);
-            const createdObjects = result.objectChanges?.filter(b => b.type === "created") || [];
+            const createdObjects = result.objectChanges?.filter((b: any) => b.type === "created") || [];
             console.log("Created objects:", createdObjects);
         } else {
             console.error("Transaction failed:", result.effects?.status.error);

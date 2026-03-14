@@ -13,7 +13,8 @@
     "sabotage-arena": "tsx src/sabotage_arena.ts"
   },
   "dependencies": {
-    "@mysten/sui": "^2.3.0",
+    "@mysten/sui": "^2.8.0",
+    "@mysten/sui.js": "^0.54.1",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
