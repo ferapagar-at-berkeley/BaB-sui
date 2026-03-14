@@ -10,7 +10,9 @@
     "merchant": "tsx src/merchant.ts",
     "lootboxes": "tsx src/lootboxes.ts",
     "staking": "tsx src/staking.ts",
-    "sabotage-arena": "tsx src/sabotage_arena.ts"
+    "sabotage-arena": "tsx src/sabotage_arena.ts",
+    "arena-wipeout": "tsx src/arena_wipeout.ts",
+    "arena-sweep": "tsx src/arena_sweep.ts"
   },
   "dependencies": {
     "@mysten/sui": "^2.8.0",
